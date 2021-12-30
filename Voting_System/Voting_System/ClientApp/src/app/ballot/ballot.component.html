@@ -1,0 +1,42 @@
+<p *ngIf="!ballot || !loaded">Loading...</p>
+<div *ngIf="ballot && loaded">
+
+  <div class="ballot-heading">
+    <h1>Ballot</h1>
+    <h4>Election of {{ballot.current_Election.year}}</h4>
+  </div>
+
+  <div class="candidate-option">
+    <h3>Candidates</h3>
+    <div class="line"></div>
+    <div class="option-row">
+      <div *ngFor="let candidate of ballot.candidates">
+        <label class="option-box" for="{{candidate.first_Name}} {{candidate.last_Name}}">
+          <input type="radio" id="{{candidate.first_Name}} {{candidate.last_Name}}" name="candidate" attr.id="elec_{{candidate.canidate_Id}}" />
+          <span class="name">{{candidate.first_Name}} {{candidate.last_Name}}</span>
+        </label>
+        <div class="info"><span>{{candidate.affiliation}} Party</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="issue-option">
+    <h3>Issues</h3>
+    <div class="line"></div>
+    <div class="option-col">
+      <div *ngFor="let issue of ballot.issues">
+        <label class="option-box" for="{{issue.title}}">
+          <input type="checkbox" id="{{issue.title}}" name="issue" attr.id="issue_{{issue.issue_Id}}" />
+          <span class="name">{{issue.title}}</span>
+        </label>
+        <div class="info"><span>{{issue.description}}</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="controls">
+    <button class="btn-submit" type="submit" (click)="recordResponse()">Submit</button>
+    <button class="btn-reset" type="reset">Reset</button>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<p *ngIf="!Elections">Loading...</p>
+<div *ngIf="Elections">
+  <label for="elections" class="spacing">Choose election: </label>
+  <select (change)="selectedChangeHandler($event)" name="elections" id="elections" class="spacing">
+    <option value="" selected>Select Year</option>
+    <option *ngFor="let election of Elections" value={{election.electionId}}>{{election.year}}</option>
+  </select>
+  <button class="btn-primary" style="margin-right: 5px;" (click)="getVoters(selection)">Submit</button>
+  <button class="btn-primary" (click)="refresh()">Reset</button>
+</div>
+<div *ngIf="loaded">
+  <h1>Users that voted during the election of {{year}}</h1>
+  <br />
+  <table class="table table-striped" aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>Voter ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let voter of Voters">
+        <td>{{voter.voter_Id}}</td>
+        <td>{{voter.first_Name}}</td>
+        <td>{{voter.last_Name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

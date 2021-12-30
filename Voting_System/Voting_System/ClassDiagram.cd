@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Voting_System.Models.Ballot">
+    <Position X="2.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAAAAAAAAAAAEAAAABBAAIAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\Ballot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Models.Candidate">
+    <Position X="8.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAQAAAAAAAAAAAAAAABAAAAAAAAAAJAAAAAAAA=</HashCode>
+      <FileName>Models\Candidate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Models.Election">
+    <Position X="4.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Election.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Models.Issue">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAgAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\Issue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Models.Result">
+    <Position X="11" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAACAAAABAAAAAAAA=</HashCode>
+      <FileName>Models\Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Models.Voter">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAQAAAAABAAAAAAACAABAAAAAAAA=</HashCode>
+      <FileName>Models\Voter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Accessors.BallotAccessor">
+    <Position X="7.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAEACAAAAAAAAAAAAAAAQAAAEAAAAAAAg=</HashCode>
+      <FileName>Accessors\BallotAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Accessors.CandidatesAccessor">
+    <Position X="5.25" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAEAAAgAAAA=</HashCode>
+      <FileName>Accessors\CandidatesAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Accessors.ElectionAccessor">
+    <Position X="3" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAABAAAEAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Accessors\ElectionAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Accessors.IssueAccessor">
+    <Position X="1" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Accessors\IssueAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Accessors.ResultsAccessor">
+    <Position X="10.75" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAgAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Accessors\ResultsAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Accessors.VoterAccessor">
+    <Position X="9" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Accessors\VoterAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Controllers.BallotController">
+    <Position X="4.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BABAAgAAAAAAUAEABAAAAAABAAAAAASABIEAAAgCAAA=</HashCode>
+      <FileName>Controllers\BallotController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Controllers.ElectionController">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ElectionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Controllers.LoginController">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAQAA=</HashCode>
+      <FileName>Controllers\LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Voting_System.Controllers.ResultsController">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAABCAAAAAgAAAAAAAAIEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ResultsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

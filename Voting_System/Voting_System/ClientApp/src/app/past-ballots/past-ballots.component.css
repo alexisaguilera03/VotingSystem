@@ -1,0 +1,102 @@
+* {
+  /*border: 1px solid red;*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body{
+}
+.container{
+  margin: auto;
+  border: .5em solid transparent;
+  background: linear-gradient(white, white)
+                padding-box,
+                repeating-linear-gradient(-45deg,
+                #0C62BB 0, #0C62BB 20.5%,
+                transparent 0, transparent 10%,
+                #7eb4e2 0, #7eb4e2 37.5%,
+                transparent 0, transparent 50%)
+                0 / 5em 5em;
+  border-radius: 15px;
+  height: 100%;
+  width: 80%;
+  padding: 25px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.container h1{
+  text-align: center;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.container h2{
+  font-size: 20px;
+  font-weight: bolder;
+}
+.container p{
+  text-align: center;
+}
+.form{
+  padding: 10px;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+.display-selection{
+  margin: auto;
+  border: 1px solid none;
+  height: auto;
+  width: 90%;
+  padding: 25px;
+  position: relative;
+  background: #C5E1FD;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px #f4f4f4;
+}
+.controls{
+  position: inherit;
+  display: block;
+  margin-left: inherit;
+  width: 30%;
+}
+.btn{
+  background: none;
+  display: inline-block;
+  margin: 1px 10px;
+  text-align: center;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.container input[value=" EDIT "]{
+  background-color: inherit;
+  border: none;
+  color: grey;
+  font-size: 15px;
+  position: relative;
+  font-weight: 300;
+}
+.container input[value="SUBMIT"]{
+  background-color: inherit;
+  border: 2px solid green;
+  color: green;
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: white;
+}
+.container input[value="SUBMIT"]:hover{
+  background: rgb(11,157,68);
+  background: radial-gradient(circle, rgba(11,157,68,1) 34%, rgba(8,128,55,1) 79%);
+  color: white;
+  font-weight: 400;
+}
+.container input[value=" EDIT "]:hover{
+  color:black;
+  border: 1px solid black;
+  border-radius: 0px;
+  font-weight: 300;
+}

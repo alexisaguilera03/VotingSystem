@@ -1,0 +1,65 @@
+<p *ngIf="!Elections">Loading...</p>
+
+<h1>Results</h1>
+<div class="election-nav" *ngIf="Elections">
+  <label for="elections">Choose Election Year: </label>
+  <select (change)="selectedChangeHandler($event)" name="elections" id="elections">
+    <option value="" selected>--Year--</option>
+    <option *ngFor="let election of Elections" value={{election.electionId}}>{{election.year}}</option>
+  </select>
+  <button class="btn-view" (click)="getResult(selection)">View</button>
+  <button class="btn-reset" (click)="refresh()">Reset</button>
+</div>
+
+<div class="result-container" *ngIf="loaded">
+
+  <div class="left-div">
+    <div class="winner">
+
+      <div class="winner-heading">
+        <div class="winner-text">
+          <span>Winner</span>
+        </div>
+        <div class="winner-name-slidein">
+          <span class="winner-name">{{Result.winner.first_Name}} {{Result.winner.last_Name}}</span>
+        </div>
+      </div>
+ 
+      <div class="candidate">
+        <div class="card">
+          <div class="card-image">
+            <span>{{Result.winner.first_Name}} {{Result.winner.last_Name}}</span>
+            <div class="line"></div>
+            <span>{{Result.winner.affiliation}}</span>
+          </div>
+          <div class="card-info">
+            <div class="candidate-vote">
+              <span class="vote-count">{{Result.winner.votes}}</span>
+            <span class="vote-text">VOTES</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-div">
+    <div class="issue-div">
+      <div class="issue-text"><span >Issues Passed</span></div>
+      <table class="table" aria-labelledby="tableLabel" *ngIf="Result">
+        <thead>
+          <tr>
+            <th>Issue</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let issue of Result.passed_Issues">
+            <td>{{issue.title}}</td>
+            <td>{{issue.description}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

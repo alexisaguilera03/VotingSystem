@@ -1,0 +1,97 @@
+<button style="margin-right: 7px;" id="candidate" (click)="success=false">Candidates</button>
+<button style="margin-right: 7px;" id="election" (click)="success=false">Elections</button>
+<button style="margin-right: 7px;" id="issue" (click)="success=false">Issues</button>
+
+<div id="candidates">
+  <br />
+  <button style="margin-right: 5px;" id="addCandidatebtn">Add</button>
+  <button style="margin-right: 5px;" id="editCandidatebtn">Edit</button>
+  <br />
+  <div id="addCandidate">
+    <br />
+    <p>Add new Candidate</p>
+    <br />
+    <label for="canFname">First Name: </label>
+    <input name="canFname" type="text" (keyup)="getData($event, 'candidateFname')" maxlength="45"/>
+    <br />
+    <label for="canLname">Last Name: </label>
+    <input name="canLname" type="text" (keyup)="getData($event, 'candidateLname')" maxlength="45"/>
+    <br />
+    <label for="canAfil">Affiliation: </label>
+    <input name="canAfil" type="text" (keyup)="getData($event, 'candidateAffiliation')" maxlength="45"/>
+    <br />
+    <label for="electionsCandidate">Choose election: </label>
+    <select (change)="getChosenElection($event)" name="elections" id="electionsCandidate">
+      <option value="" selected>Select Year</option>
+      <option *ngFor="let election of Elections" value="{{election.electionId}}">{{election.year}}</option>
+    </select>
+    <br />
+    <input (click)="submitCandidate()" type="submit" />
+    <br />
+  </div>
+  <div id="editCandidate">
+    <br />
+    <p>Select Candidate Year</p>
+    <select (change)="getChosenElection($event)" name="elections" id="electionsCandidate">
+      <option value="1" selected>Select Year</option>
+      <option *ngFor="let election of Elections" value="{{election.electionId}}">{{election.year}}</option>
+    </select>
+    <p>Still under development!</p>
+  </div>
+</div>
+<div id="elections">
+  <br />
+  <button style="margin-right: 5px;" id="addElectionbtn">Add</button>
+  <button style="margin-right: 5px;" id="editElectionbtn">Edit</button>
+  <div id="addElection">
+    <br />
+    <p>Add new election</p>
+    <label for="electionYear">Year: </label>
+    <input type="number" name="electionYear" (keyup)="getData($event, 'electionYear')" />
+    <br />
+    <label for="electionActive">Active: </label>
+    <input type="checkbox" name="electionActive" id="electionActive" />
+    <br />
+    <input (click)="submitElection()" type="submit" />
+  </div>
+  <div id="editElection">
+    <br />
+    <p>Change Active Election</p>
+    <label for="electionsEdit">Election year: </label>
+    <select (change)="getChosenElection($event)" name="electionsEdit" id="electionsEdit">
+      <option value="" selected>Select Year</option>
+      <option *ngFor="let election of Elections" value="{{election.electionId}}">{{election.year}}</option>
+    </select>
+    <br />
+    <br />
+    <input (click)="editActiveElection()" type="submit" />
+    <p>More functionality to come.</p>
+  </div>
+</div>
+<div id="issues">
+  <br />
+  <button style="margin-right: 5px;" id="addIssuebtn">Add</button>
+  <button style="margin-right: 5px;" id="editIssuebtn">Edit</button>
+  <br />
+  <div id="addIssue">
+    <br />
+    <label for="issueTitle">Title: </label>
+    <input type="text" name="issueTitle" (keyup)="getData($event, 'issueTitle')" maxlength="45"/>
+    <br />
+    <label for="issueDescription">Description: </label>
+    <textarea name="issueDescription" (keyup)="getData($event, 'issueDescription')" maxlength="100" rows="5" cols="23" style="vertical-align:middle;"></textarea>
+    <br />
+    <label for="elections">Choose election: </label>
+    <select (change)="getChosenElection($event)" name="elections" id="elections">
+      <option value="" selected>Select Year</option>
+      <option *ngFor="let election of Elections" value="{{election.electionId}}">{{election.year}}</option>
+    </select>
+    <br />
+    <input (click)="submitIssue()" type="submit" />
+  </div>
+  <div id="editIssue">
+    <br />
+    <p>Not implemented</p>
+  </div>
+</div>
+<p *ngIf="success">Successfully Submitted!</p>

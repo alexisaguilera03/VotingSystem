@@ -1,0 +1,88 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form h2 {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+}
+
+.login-form {
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 68%;
+    left: 48%;
+    transform: translate(-50%,-50%);
+}
+
+  .login-form input[type=email], .login-form input[type=password] {
+    background: none;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 0 0px 1000px #3f3D56 inset;
+    border-radius: 25px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    width: 250px;
+    outline: var(--secondary-color);
+    color: var(--secondary-color);
+    transition: 0.25s;
+  }
+
+  .login-form input[type=email]:focus, .login-form input[type=password]:focus {
+    width: 280px;
+    border-color: var(--primary-color);
+  }
+
+.btn {
+  background: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  color: var(--secondary-color);
+  padding: 14px 40px;
+  outline: none;
+  transition: 0.25s;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+  .btn:hover {
+    background-color: var(--primary-color);
+  }
+
+  .logout {
+      color: red;
+      text-align: right;
+      font-weight: 500;
+  }
+
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--secondary-color);
+  caret-color: var(--secondary-color);
+}

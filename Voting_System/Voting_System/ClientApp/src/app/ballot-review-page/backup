@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'app-ballot-review-page',
+  templateUrl: './ballot-review-page.component.html',
+  styleUrls: ['./ballot-review-page.component.css']
+})
+@Injectable({
+  providedIn: 'root'
+})
+export class BallotReviewPageComponent implements OnInit {
+
+  constructor() { }
+
+
+}
+interface ICandidate {
+  id: number;
+  fname: string;
+  lname: string;
+  affiliation: string;
+  election_id: number;
+  votes: number;
+}

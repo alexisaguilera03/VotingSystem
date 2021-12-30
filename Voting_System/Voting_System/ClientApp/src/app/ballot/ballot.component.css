@@ -1,0 +1,173 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1, h4 {
+  text-align: center;
+}
+
+h4 {
+  padding: 10px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  color: red;
+}
+
+.ballot-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 20px;
+}
+
+.candidate-option, .issue-option {
+  display: inline-flex;
+  justify-content: space-evenly;
+  gap: 1em;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 2px var(--primary-color);
+}
+
+.candidate-option {
+  animation: showup 2s normal;
+}
+
+.issue-option {
+  animation: showup 5s normal;
+}
+
+.option-row {
+  display: inline-flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  gap: 1em;
+  width: 60%;
+  padding: 10px;
+}
+
+.option-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: auto;
+  gap: 1em;
+  width: 60%;
+  padding: 10px;
+}
+
+.option-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  padding: 10px;
+}
+
+  .option-box input {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+  }
+
+.name {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 20px;
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.info {
+  padding-left: 42px;
+}
+
+  .info span {
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+.controls {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 20px 0;
+  animation: showup 8s normal;
+}
+
+.btn-submit {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  padding: 0 10px;
+  text-transform: uppercase;
+  transition: 0.25s;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+  .btn-submit:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+.btn-reset {
+  border: 2px solid red;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  padding: 0 10px;
+  text-transform: uppercase;
+  transition: 0.25s;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+  .btn-reset:hover {
+    background-color: red;
+    color: white;
+  }
+
+.line {
+  width: 0.2rem;
+  background-color: var(--primary-color);
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

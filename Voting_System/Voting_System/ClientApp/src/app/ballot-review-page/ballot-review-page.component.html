@@ -1,0 +1,51 @@
+
+<body>
+<p *ngIf="!ballot">Loading...</p>
+<div *ngIf="ballot" class="container">
+  <h1>Ballot Review</h1>
+  <p class="notice">Please double-check each of your entries before submitting your ballot.</p>
+  <div class="form">
+    <h2>Candidate(s):</h2>
+    <br>
+    <div class="display-selection">
+      <table class='table table-striped' aria-labelledby="tableLabel">
+        <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Party</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let candidate of ballot.Candidates">
+          <td>{{candidate.First_Name}}</td>
+          <td>{{candidate.Last_Name}}</td>
+          <td>{{candidate.Affiliation}}</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <h2>Issue(s):</h2>
+    <br>
+    <div class="display-selection">
+      <table class='table table-striped' aria-labelledby="tableLabel">
+        <thead>
+        <tr>
+          <th>Issue</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let issue of ballot.Issues">
+          <td>{{issue.Title}}</td>
+          <td>{{issue.Description}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="controls">
+    <input (click)='edit()' class="btn" type="submit" name="" value=" EDIT "/>
+    <input (click)="submit()" class="btn" type="submit" name="" value="SUBMIT"/>
+  </div>
+  <p *ngIf="submitted">Submitted successfully! Returning home...</p>
+</div>
+
+</body>

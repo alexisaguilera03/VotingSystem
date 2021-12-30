@@ -1,0 +1,50 @@
+<p *ngIf="!Elections">Loading...</p>
+<div *ngIf="Elections">
+  <label for="elections" class="spacing">Choose election: </label>
+  <select (change)="selectedChangeHandler($event)" name="elections" id="elections" class="spacing">
+    <option value="" selected>Select Year</option>
+    <option *ngFor="let election of Elections" value={{election.electionId}}>{{election.year}}</option>
+  </select>
+  <button class="btn-primary" style="margin-right: 5px; margin-left: 5px;" (click)="getBallot()">Submit</button>
+  <button class="btn-primary" (click)="refresh()">Reset</button>
+</div>
+<br/>
+<div *ngIf="pastBallot" class="container">
+  <div class="form">
+    <h2>Candidate(s):</h2>
+    <br>
+    <div class="display-selection">
+      <table class='table table-striped' aria-labelledby="tableLabel">
+        <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Party</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let candidate of pastBallot.candidates">
+          <td>{{candidate.first_Name}}</td>
+          <td>{{candidate.last_Name}}</td>
+          <td>{{candidate.affiliation}}</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <h2>Issue(s):</h2>
+    <br>
+    <div class="display-selection">
+      <table class='table table-striped' aria-labelledby="tableLabel">
+        <thead>
+        <tr>
+          <th>Issue</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let issue of pastBallot.issues">
+          <td>{{issue.title}}</td>
+          <td>{{issue.description}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

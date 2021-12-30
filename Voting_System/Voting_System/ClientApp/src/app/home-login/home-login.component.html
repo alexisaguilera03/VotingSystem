@@ -1,0 +1,21 @@
+<p *ngIf="!loaded">loading...</p>
+<body *ngIf="loaded">
+  <p class="logout" *ngIf="success">Successfully logged out!</p>
+  <div class="box">
+    <div>
+      <img src="images/vote-img.svg" />
+    </div>
+    <form class="login-form" action="home-login.component.html" method="post">
+      <h2>Welcome</h2>
+      <div>
+        <input type="email" (keyup)="getUsername($event)" placeholder="Username" name="username" required />
+      </div>
+      <div>
+        <input type="password" (keyup)="getPassword($event)" placeholder="Password" name="password" required />
+      </div>
+      <input (click)="login()" class="btn" type="submit" name="" value="LOGIN" />
+    </form>
+  </div>
+</body>
+
+
