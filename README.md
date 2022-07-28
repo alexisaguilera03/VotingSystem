@@ -1,6 +1,6 @@
 # CSCE 361 - Software Engineering Project #
 
-The developers on this project are Abby Seibel, Alexsis Aguilera Ortiz, Bao Bui, Emmanuel Lopez, and Kevin Pham 
+The developers on this project are Abby Seibel, Alexis Aguilera Ortiz, Bao Bui, Emmanuel Lopez, and Kevin Pham 
 
 This project was developed in an Agile workflow and focuses on the SOLID Principles, good UI/UX design techniques, and overall Software engineering principles.
 
